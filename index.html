@@ -1,329 +1,147 @@
 <!DOCTYPE html>
-
 <html lang="fa" dir="rtl">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>سایت من 🌸</title>
-
-  <style>
-
-    * {
-
-      box-sizing: border-box;
-
-      margin: 0;
-
-      padding: 0;
-
-    }
-
-    body {
-
-      font-family: Tahoma, Arial, sans-serif;
-
-      background: linear-gradient(135deg, #fff0f6, #f5f0ff);
-
-      color: #333;
-
-      min-height: 100vh;
-
-      line-height: 1.8;
-
-    }
-
-    header {
-
-      background: linear-gradient(135deg, #d63384, #8e44ad);
-
-      color: white;
-
-      text-align: center;
-
-      padding: 60px 20px;
-
-      border-radius: 0 0 35px 35px;
-
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-
-    }
-
-    header h1 {
-
-      font-size: 38px;
-
-      margin-bottom: 15px;
-
-    }
-
-    header p {
-
-      font-size: 19px;
-
-      opacity: 0.95;
-
-    }
-
-    .container {
-
-      width: 90%;
-
-      max-width: 900px;
-
-      margin: 35px auto;
-
-    }
-
-    .card {
-
-      background: white;
-
-      padding: 30px;
-
-      margin-bottom: 25px;
-
-      border-radius: 25px;
-
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-
-    }
-
-    .card h2 {
-
-      color: #b12a70;
-
-      margin-bottom: 15px;
-
-      font-size: 26px;
-
-    }
-
-    .card p {
-
-      font-size: 17px;
-
-      color: #555;
-
-    }
-
-    .about {
-
-      text-align: center;
-
-    }
-
-    .emoji {
-
-      font-size: 60px;
-
-      margin-bottom: 15px;
-
-    }
-
-    .buttons {
-
-      display: flex;
-
-      justify-content: center;
-
-      gap: 15px;
-
-      flex-wrap: wrap;
-
-      margin-top: 25px;
-
-    }
-
-    .button {
-
-      display: inline-block;
-
-      text-decoration: none;
-
-      background: #d63384;
-
-      color: white;
-
-      padding: 12px 25px;
-
-      border-radius: 30px;
-
-      font-size: 16px;
-
-      transition: 0.3s;
-
-    }
-
-    .button:hover {
-
-      background: #8e44ad;
-
-      transform: translateY(-3px);
-
-    }
-
-    footer {
-
-      text-align: center;
-
-      padding: 30px 20px;
-
-      color: #777;
-
-      font-size: 14px;
-
-    }
-
-    @media (max-width: 600px) {
-
-      header {
-
-        padding: 45px 15px;
-
-      }
-
-      header h1 {
-
-        font-size: 28px;
-
-      }
-
-      header p {
-
-        font-size: 16px;
-
-      }
-
-      .card {
-
-        padding: 22px;
-
-      }
-
-      .card h2 {
-
-        font-size: 22px;
-
-      }
-
-      .card p {
-
-        font-size: 15px;
-
-      }
-
-    }
-
-  </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="وب‌سایت رسمی شایو پروانه | شایان حسین وش، رپر و هنرمند متولد ارومیه">
+<meta name="author" content="Shayo Parvaneh">
+<title>Shayo Parvaneh | شایو پروانه</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+:root{--bg:#050505;--panel:#0d0d0d;--panel2:#141414;--line:#252525;--white:#fff;--muted:#999}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:Vazirmatn,Tahoma,Arial,sans-serif;line-height:1.9}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(5,5,5,.78);backdrop-filter:blur(16px);border-bottom:1px solid #171717}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:18px;font-weight:900;letter-spacing:1px}
+.logo span{color:#777}
+.menu{display:flex;gap:25px;color:#aaa;font-size:14px}
+.menu a:hover{color:#fff}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr .9fr;gap:65px;align-items:center;padding-top:100px}
+.kicker{font-size:14px;color:#777;letter-spacing:3px;margin-bottom:15px}
+.hero h1{font-size:clamp(58px,9vw,115px);line-height:.95;letter-spacing:-5px;font-weight:900}
+.hero h1 small{display:block;font-size:clamp(19px,2.5vw,29px);letter-spacing:0;color:#999;margin-bottom:20px}
+.hero p{max-width:600px;color:#aaa;font-size:17px;margin:30px 0 35px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:11px 22px;border:1px solid #3c3c3c;border-radius:999px;font-weight:800;transition:.25s}
+.btn.primary{background:#fff;color:#000}
+.btn:hover{transform:translateY(-2px);border-color:#777}
+.hero-photo{height:690px;border-radius:28px;overflow:hidden;background:#111;position:relative}
+.hero-photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);object-position:center}
+.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.7))}
+section{padding:100px 0;border-top:1px solid var(--line)}
+.eyebrow{color:#666;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px}
+h2{font-size:clamp(40px,6vw,62px);line-height:1.2;margin-bottom:38px}
+.bio{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.bio-text{color:#b5b5b5;font-size:17px;line-height:2.2}
+.facts{border-top:1px solid var(--line)}
+.fact{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line)}
+.fact span{color:#888}
+.music-card{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;justify-content:space-between;align-items:center}
+.music-title{font-size:24px;font-weight:900}
+.music-sub{font-size:13px;color:#777}
+.play{width:54px;height:54px;border:1px solid #444;border-radius:50%;display:grid;place-items:center;font-size:18px}
+.gallery{columns:3 250px;column-gap:18px}
+.gallery figure{break-inside:avoid;margin:0 0 18px}
+.gallery img{width:100%;display:block;border-radius:18px;filter:grayscale(100%);transition:.35s}
+.gallery img:hover{filter:grayscale(0);transform:scale(1.015)}
+.gallery figcaption{display:none}
+.socials{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.social{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;transition:.25s}
+.social:hover{border-color:#666;transform:translateY(-2px)}
+.social small{color:#777}
+.contact-note{color:#aaa;font-size:17px;line-height:2.1}
+footer{border-top:1px solid var(--line);padding:35px 0;color:#666;font-size:13px}
+@media(max-width:820px){
+.menu{display:none}
+.hero,.bio{grid-template-columns:1fr;gap:35px}
+.hero{padding-top:110px}
+.hero-photo{height:560px}
+.hero h1{letter-spacing:-3px}
+.socials{grid-template-columns:1fr}
+section{padding:75px 0}
+}
+</style>
 </head>
-
 <body>
+<nav><div class="container nav">
+<a class="logo" href="#">SHAYO <span>PARVANEH</span></a>
+<div class="menu">
+<a href="#bio">بیوگرافی</a>
+<a href="#music">موزیک</a>
+<a href="#gallery">گالری</a>
+<a href="#links">لینک‌ها</a>
+</div>
+</div></nav>
 
-  <header>
+<header class="container hero">
+<div>
+<div class="kicker">OFFICIAL ARTIST WEBSITE</div>
+<h1><small>شایان حسین وش</small>شایو<br>پروانه</h1>
+<p>وب‌سایت رسمی شایو پروانه؛ معرفی هنرمند، بیوگرافی، موسیقی، تصاویر و مسیرهای رسمی ارتباط با من.</p>
+<div class="btns">
+<a class="btn primary" href="#music">شنیدن Parvanam</a>
+<a class="btn" href="#links">شبکه‌های رسمی</a>
+</div>
+</div>
+<div class="hero-photo"><img src="assets/images/photo-1.jpg" alt="شایو پروانه"></div>
+</header>
 
-    <div class="emoji">🌸</div>
+<section id="bio"><div class="container">
+<div class="eyebrow">ABOUT THE ARTIST</div>
+<h2>بیوگرافی</h2>
+<div class="bio">
+<div class="bio-text">
+<p><b>شایان حسین وش</b>، با نام هنری <b>شایو پروانه (Shayo Parvaneh)</b>، رپر و هنرمند ایرانی متولد <b>ارومیه در سال ۱۳۸۴</b> است.</p>
+<p style="margin-top:20px">شایو پروانه فعالیت هنری خود را با تمرکز بر موسیقی رپ و هیپ‌هاپ دنبال می‌کند و تلاش دارد هویت و بیان شخصی خود را در آثارش شکل دهد. از آثار معرفی‌شده او می‌توان به قطعه <b>Parvanam</b> اشاره کرد.</p>
+<p style="margin-top:20px">این وب‌سایت به‌عنوان صفحه رسمی شایو پروانه برای معرفی هنرمند، آثار، تصاویر و لینک‌های رسمی او طراحی شده است.</p>
+</div>
+<div class="facts">
+<div class="fact"><b>نام واقعی</b><span>شایان حسین وش</span></div>
+<div class="fact"><b>نام هنری</b><span>شایو پروانه</span></div>
+<div class="fact"><b>نام انگلیسی</b><span>Shayo Parvaneh</span></div>
+<div class="fact"><b>محل تولد</b><span>ارومیه</span></div>
+<div class="fact"><b>سال تولد</b><span>۱۳۸۴</span></div>
+<div class="fact"><b>سبک</b><span>Rap / Hip-Hop</span></div>
+</div>
+</div>
+</div></section>
 
-    <h1>سلام! به سایت من خوش آمدید</h1>
+<section id="music"><div class="container">
+<div class="eyebrow">MUSIC</div><h2>موزیک</h2>
+<div class="music-card">
+<div><div class="music-title">Parvanam</div><div class="music-sub">Shayo Parvaneh • SoundCloud</div></div>
+<a class="play" href="https://on.soundcloud.com/sBXing3mtNrJlnPCg7" target="_blank" aria-label="پخش Parvanam">▶</a>
+</div>
+</div></section>
 
-    <p>
+<section id="gallery"><div class="container">
+<div class="eyebrow">VISUALS</div><h2>گالری</h2>
+<div class="gallery"><figure><img src="assets/images/photo-1.jpg" alt="شایو پروانه"><figcaption>Shayo Parvaneh</figcaption></figure>
+<figure><img src="assets/images/photo-2.jpg" alt="شایو پروانه"><figcaption>Shayo Parvaneh</figcaption></figure>
+<figure><img src="assets/images/photo-3.jpg" alt="شایو پروانه"><figcaption>Shayo Parvaneh</figcaption></figure>
+<figure><img src="assets/images/photo-4.jpg" alt="شایو پروانه"><figcaption>Shayo Parvaneh</figcaption></figure>
+<figure><img src="assets/images/photo-5.jpg" alt="شایو پروانه"><figcaption>Shayo Parvaneh</figcaption></figure>
+<figure><img src="assets/images/photo-6.jpg" alt="شایو پروانه"><figcaption>Shayo Parvaneh</figcaption></figure>
+<figure><img src="assets/images/photo-7.jpg" alt="شایو پروانه"><figcaption>Shayo Parvaneh</figcaption></figure>
+<figure><img src="assets/images/photo-8.jpg" alt="شایو پروانه"><figcaption>Shayo Parvaneh</figcaption></figure>
+<figure><img src="assets/images/photo-9.jpg" alt="شایو پروانه"><figcaption>Shayo Parvaneh</figcaption></figure>
+<figure><img src="assets/images/photo-10.jpg" alt="شایو پروانه"><figcaption>Shayo Parvaneh</figcaption></figure></div>
+</div></section>
 
-      اینجا صفحه‌ی شخصی من است 💕
+<section id="links"><div class="container">
+<div class="eyebrow">CONNECT</div><h2>لینک‌های رسمی</h2>
+<div class="socials">
+<a class="social" href="https://www.instagram.com/shayoparvane" target="_blank"><b>Instagram</b><small>@shayoparvane ↗</small></a>
+<a class="social" href="https://youtube.com/@shayoparvane" target="_blank"><b>YouTube</b><small>@shayoparvane ↗</small></a>
+<a class="social" href="https://on.soundcloud.com/sBXing3mtNrJlnPCg7" target="_blank"><b>SoundCloud</b><small>Parvanam ↗</small></a>
+<a class="social" href="https://t.me/shyparvane" target="_blank"><b>Telegram</b><small>@shyparvane ↗</small></a>
+</div>
+</div></section>
 
-    </p>
-
-  </header>
-
-  <main class="container">
-
-    <section class="card about">
-
-      <h2>درباره من</h2>
-
-      <p>
-
-        سلام! به وب‌سایت من خوش آمدید.
-
-        این صفحه را برای معرفی خودم و کارهایی که انجام می‌دهم ساخته‌ام.
-
-      </p>
-
-    </section>
-
-    <section class="card">
-
-      <h2>✨ چیزهایی که دوست دارم</h2>
-
-      <p>
-
-        🌸 یادگیری چیزهای جدید
-
-        <br>
-
-        💻 کار با کامپیوتر و فناوری
-
-        <br>
-
-        🎨 خلاقیت و طراحی
-
-        <br>
-
-        📚 مطالعه و پیشرفت
-
-      </p>
-
-    </section>
-
-    <section class="card">
-
-      <h2>📞 ارتباط با من</h2>
-
-      <p>
-
-        برای ارتباط با من می‌توانید از لینک‌های زیر استفاده کنید.
-
-      </p>
-
-      <div class="buttons">
-
-        <a class="button" href="#" target="_blank">
-
-          اینستاگرام
-
-        </a>
-
-        <a class="button" href="#" target="_blank">
-
-          تلگرام
-
-        </a>
-
-        <a class="button" href="mailto:example@email.com">
-
-          ایمیل
-
-        </a>
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer>
-
-    ساخته شده با ❤️ و HTML
-
-    <br>
-
-    © 2026 تمامی حقوق محفوظ است
-
-  </footer>
-
+<footer><div class="container">© 2026 Shayo Parvaneh — وب‌سایت رسمی</div></footer>
 </body>
-
 </html>
