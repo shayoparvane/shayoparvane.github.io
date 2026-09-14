@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+
+<head>
+<meta name="google-site-verification" content="C32v5T_1CCojQibW-OFH58-nKeRETazSDcoDylOKEAw" />
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>شایو پروانه | Shayo Parvaneh</title>
+
+  <meta name="description" content="وب‌سایت رسمی شایو پروانه - Shayo Parvaneh">
+
+  <meta name="author" content="شایان حسین وش - شایو پروانه">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: #050505;
+      color: #f5f5f5;
+      line-height: 2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Header */
+
+    header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #222;
+    }
+
+    nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: #ccc;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    .menu a:hover {
+      color: #fff;
+    }
+
+    /* Hero */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 20px 80px;
+      background:
+        radial-gradient(circle at center, #1a1a1a 0%, #080808 45%, #000 100%);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 90px);
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    .hero .english {
+      direction: ltr;
+      font-size: clamp(22px, 4vw, 40px);
+      color: #aaa;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      color: #bbb;
+      font-size: 17px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 12px 28px;
+      border: 1px solid #555;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .hero-button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* Sections */
+
+    section {
+      padding: 100px 0;
+      border-bottom: 1px solid #171717;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #777;
+      margin-bottom: 50px;
+    }
+
+    /* Biography */
+
+    .bio-box {
+      max-width: 850px;
+      margin: auto;
+      background: #0d0d0d;
+      border: 1px solid #202020;
+      border-radius: 12px;
+      padding: 35px;
+    }
+
+    .bio-box p {
+      color: #ccc;
+      margin-bottom: 22px;
+      font-size: 16px;
+    }
+
+    .bio-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Music */
+
+    .music-box {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      background: #0d0d0d;
+      border: 1px solid #202020;
+      border-radius: 12px;
+      padding: 40px 25px;
+    }
+
+    .music-box h3 {
+      font-size: 27px;
+      margin-bottom: 10px;
+    }
+
+    .music-box p {
+      color: #999;
+      margin-bottom: 25px;
+    }
+
+    .music-button {
+      display: inline-block;
+      padding: 12px 30px;
+      border: 1px solid #555;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .music-button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* Gallery */
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #222;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.02);
+      opacity: 0.85;
+    }
+
+    /* Links */
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .link-box {
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #222;
+      background: #0d0d0d;
+      border-radius: 8px;
+      color: #ccc;
+      transition: 0.3s;
+    }
+
+    .link-box:hover {
+      background: #fff;
+      color: #000;
+      transform: translateY(-3px);
+    }
+
+    /* Contact */
+
+    .contact-box {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+      color: #bbb;
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 35px 20px;
+      text-align: center;
+      color: #666;
+      font-size: 13px;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 800px) {
+
+      .menu {
+        gap: 12px;
+      }
+
+      .menu a {
+        font-size: 12px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .links {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 500px) {
+
+      nav {
+        flex-direction: column;
+        justify-content: center;
+        padding: 12px 0;
+      }
+
+      header {
+        position: absolute;
+      }
+
+      .hero {
+        padding-top: 150px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .bio-box {
+        padding: 25px 20px;
+      }
+
+      .bio-box p {
+        font-size: 15px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 380px;
+      }
+
+      .links {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<header>
+
+  <nav class="container">
+
+    <div class="logo">
+      شایو پروانه
+    </div>
+
+    <ul class="menu">
+
+      <li><a href="#home">خانه</a></li>
+      <li><a href="#bio">بیوگرافی</a></li>
+      <li><a href="#music">موسیقی</a></li>
+      <li><a href="#gallery">گالری</a></li>
+      <li><a href="#links">لینک‌ها</a></li>
+      <li><a href="#contact">ارتباط</a></li>
+
+    </ul>
+
+  </nav>
+
+</header>
+
+
+<!-- Hero -->
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>شایو پروانه</h1>
+
+    <div class="english">
+      SHAYO PARVANEH
+    </div>
+
+    <p>
+      اینجا صفحه رسمی شایو پروانه است؛
+      جایی برای معرفی فعالیت‌ها، موسیقی، تصاویر
+      و مسیرهای ارتباطی رسمی.
+    </p>
+
+    <a href="#bio" class="hero-button">
+      بیشتر بدانید
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- Biography -->
+
+<section id="bio">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      بیوگرافی
+    </h2>
+
+    <p class="section-subtitle">
+      درباره شایو پروانه
+    </p>
+
+    <div class="bio-box">
+
+      <p>
+        <span class="highlight">شایان حسین‌وش</span>
+        با نام هنری
+        <span class="highlight">شایو پروانه</span>،
+        در ۲۵ شهریور ۱۳۸۴ در ارومیه متولد شد و در ایران
+        فعالیت هنری خود را دنبال می‌کند.
+      </p>
+
+      <p>
+        علاقه او به موسیقی از سال‌های نوجوانی شکل گرفت و در سال
+        <span class="highlight">۱۴۰۰</span>
+        فعالیت خود را در این عرصه آغاز کرد.
+        سبک اصلی موسیقی شایو پروانه
+        <span class="highlight">رپ</span>
+        است؛ سبکی که برای او بستری برای بیان احساسات،
+        افکار و نگاه شخصی‌اش به زندگی محسوب می‌شود.
+      </p>
+
+      <p>
+        نام هنری
+        <span class="highlight">«شایو پروانه»</span>
+        نیز داستانی شخصی دارد.
+        علاقه خاص او به پروانه و مفهوم
+        «پروانه بودن» باعث شد افراد نزدیکش او را «پروانه»
+        صدا بزنند.
+        دوستانش نیز به مرور او را با نام «شایو پروانه»
+        خطاب کردند و این نام به تدریج به نام هنری او تبدیل شد.
+      </p>
+
+      <p>
+        سال
+        <span class="highlight">۱۴۰۵</span>
+        نقطه عطفی در مسیر هنری شایو پروانه بود؛
+        سالی که فعالیت موسیقی او وارد مرحله‌ای رسمی و جدی‌تر شد.
+        در همین سال، اثر
+        <span class="highlight">«Parvanam»</span>
+        منتشر شد و آغازگر دوره رسمی فعالیت هنری او بود.
+      </p>
+
+      <p>
+        شایو پروانه از آن زمان مسیر خود را در موسیقی رپ ادامه داده
+        و تلاش می‌کند هویت هنری خود را بر پایه نگاه،
+        تجربه و بیان شخصی خودش شکل دهد.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Music -->
+
+<section id="music">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      موسیقی
+    </h2>
+
+    <p class="section-subtitle">
+      آثار شایو پروانه
+    </p>
+
+    <div class="music-box">
+
+      <h3>
+        Parvanam
+      </h3>
+
+      <p>
+        منتشر شده در سال ۱۴۰۵
+      </p>
+
+      <a
+        class="music-button"
+        href="https://on.soundcloud.com/sBXing3mtNrJlnPCg7"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        شنیدن در SoundCloud
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Gallery -->
+
+<section id="gallery">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      گالری
+    </h2>
+
+    <p class="section-subtitle">
+      تصاویر شایو پروانه
+    </p>
+
+    <div class="gallery">
+
+      <img src="./photo-1.jpg" alt="شایو پروانه - تصویر ۱">
+      <img src="./photo-2.jpg" alt="شایو پروانه - تصویر ۲">
+      <img src="./photo-3.jpg" alt="شایو پروانه - تصویر ۳">
+      <img src="./photo-4.jpg" alt="شایو پروانه - تصویر ۴">
+      <img src="./photo-5.jpg" alt="شایو پروانه - تصویر ۵">
+      <img src="./photo-6.jpg" alt="شایو پروانه - تصویر ۶">
+      <img src="./photo-7.jpg" alt="شایو پروانه - تصویر ۷">
+      <img src="./photo-8.jpg" alt="شایو پروانه - تصویر ۸">
+      <img src="./photo-9.jpg" alt="شایو پروانه - تصویر ۹">
+      <img src="./photo-10.jpg" alt="شایو پروانه - تصویر ۱۰">
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Official Links -->
+
+<section id="links">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      لینک‌های رسمی
+    </h2>
+
+    <p class="section-subtitle">
+      صفحات رسمی شایو پروانه
+    </p>
+
+    <div class="links">
+
+      <a
+        class="link-box"
+        href="https://www.instagram.com/shayoparvane?stkn=YnA3amdqejIwczZn&utm_source=qr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+      <a
+        class="link-box"
+        href="https://youtube.com/@shayoparvane?si=wrhKFDXR9ytN-cJ3"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        YouTube
+      </a>
+
+      <a
+        class="link-box"
+        href="https://t.me/shyparvane"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Telegram
+      </a>
+
+      <a
+        class="link-box"
+        href="https://on.soundcloud.com/sBXing3mtNrJlnPCg7"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        SoundCloud
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Contact -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      ارتباط
+    </h2>
+
+    <p class="section-subtitle">
+      ارتباط با شایو پروانه
+    </p>
+
+    <div class="contact-box">
+
+      <p>
+        برای دنبال کردن فعالیت‌ها و آثار جدید شایو پروانه
+        می‌توانید از لینک‌های رسمی این وب‌سایت استفاده کنید.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+
+  <p>
+    © ۱۴۰۵ شایو پروانه | SHAYO PARVANEH
+  </p>
+
+  <p>
+    وب‌سایت رسمی
+  </p>
+
+</footer>
+
+
+</body>
+
+</html>
