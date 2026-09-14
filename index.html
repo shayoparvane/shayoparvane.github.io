@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="سایت رسمی شایو پروانه">
+
+  <meta name="author" content="Shayo Parvaneh">
+
+  <title>شایو پروانه | Shayo Parvaneh</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+    body {
+
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+
+      background: #080808;
+
+      color: #fff;
+
+      line-height: 1.9;
+
+    }
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+    .container {
+
+      width: min(1100px, 92%);
+
+      margin: auto;
+
+    }
+
+    /* NAVBAR */
+
+    nav {
+
+      position: fixed;
+
+      top: 0;
+
+      left: 0;
+
+      right: 0;
+
+      z-index: 1000;
+
+      background: rgba(8, 8, 8, 0.88);
+
+      backdrop-filter: blur(14px);
+
+      border-bottom: 1px solid #222;
+
+    }
+
+    .nav-inner {
+
+      height: 72px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+    }
+
+    .logo {
+
+      font-size: 21px;
+
+      font-weight: 900;
+
+    }
+
+    .logo span {
+
+      color: #aaa;
+
+      font-weight: 400;
+
+    }
+
+    .nav-links {
+
+      display: flex;
+
+      gap: 28px;
+
+      list-style: none;
+
+    }
+
+    .nav-links a {
+
+      color: #bbb;
+
+      transition: .3s;
+
+    }
+
+    .nav-links a:hover {
+
+      color: #fff;
+
+    }
+
+    /* HERO */
+
+    .hero {
+
+      min-height: 100vh;
+
+      display: flex;
+
+      align-items: center;
+
+      padding-top: 90px;
+
+    }
+
+    .hero-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.05fr .95fr;
+
+      gap: 55px;
+
+      align-items: center;
+
+    }
+
+    .hero-image {
+
+      position: relative;
+
+    }
+
+    .hero-image img {
+
+      width: 100%;
+
+      max-width: 500px;
+
+      aspect-ratio: 1 / 1;
+
+      object-fit: cover;
+
+      display: block;
+
+      margin: auto;
+
+      border-radius: 28px;
+
+      border: 1px solid #333;
+
+      box-shadow: 0 25px 70px rgba(0,0,0,.55);
+
+    }
+
+    .hero-text h1 {
+
+      font-size: clamp(42px, 7vw, 78px);
+
+      line-height: 1.2;
+
+      margin-bottom: 18px;
+
+    }
+
+    .hero-text h1 span {
+
+      color: #aaa;
+
+    }
+
+    .hero-text .subtitle {
+
+      font-size: 21px;
+
+      color: #aaa;
+
+      margin-bottom: 25px;
+
+    }
+
+    .hero-text p {
+
+      color: #bdbdbd;
+
+      font-size: 17px;
+
+      max-width: 650px;
+
+      margin-bottom: 32px;
+
+    }
+
+    .buttons {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+    }
+
+    .btn {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 12px 22px;
+
+      border: 1px solid #444;
+
+      border-radius: 12px;
+
+      transition: .3s;
+
+      color: #eee;
+
+    }
+
+    .btn:hover {
+
+      background: #fff;
+
+      color: #000;
+
+      border-color: #fff;
+
+      transform: translateY(-2px);
+
+    }
+
+    /* SECTIONS */
+
+    section {
+
+      padding: 100px 0;
+
+    }
+
+    .section-title {
+
+      font-size: 38px;
+
+      margin-bottom: 12px;
+
+    }
+
+    .section-title span {
+
+      color: #888;
+
+    }
+
+    .section-description {
+
+      color: #999;
+
+      margin-bottom: 45px;
+
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 50px;
+
+      align-items: center;
+
+    }
+
+    .about-image img {
+
+      width: 100%;
+
+      border-radius: 22px;
+
+      border: 1px solid #292929;
+
+      display: block;
+
+    }
+
+    .about-text p {
+
+      color: #bbb;
+
+      font-size: 17px;
+
+      margin-bottom: 18px;
+
+    }
+
+    /* GALLERY */
+
+    .gallery {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 15px;
+
+    }
+
+    .gallery-item {
+
+      overflow: hidden;
+
+      border-radius: 16px;
+
+      background: #111;
+
+      border: 1px solid #292929;
+
+      aspect-ratio: 1 / 1;
+
+    }
+
+    .gallery-item img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+      transition: .4s;
+
+    }
+
+    .gallery-item:hover img {
+
+      transform: scale(1.06);
+
+    }
+
+    /* LINKS */
+
+    .social-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 15px;
+
+    }
+
+    .social-card {
+
+      padding: 25px 15px;
+
+      border: 1px solid #292929;
+
+      background: #101010;
+
+      border-radius: 18px;
+
+      text-align: center;
+
+      transition: .3s;
+
+    }
+
+    .social-card:hover {
+
+      border-color: #666;
+
+      transform: translateY(-4px);
+
+      background: #151515;
+
+    }
+
+    .social-card .icon {
+
+      font-size: 30px;
+
+      margin-bottom: 8px;
+
+    }
+
+    .social-card h3 {
+
+      font-size: 18px;
+
+      margin-bottom: 4px;
+
+    }
+
+    .social-card p {
+
+      color: #888;
+
+      font-size: 13px;
+
+    }
+
+    /* FOOTER */
+
+    footer {
+
+      border-top: 1px solid #222;
+
+      padding: 40px 0;
+
+      text-align: center;
+
+      color: #777;
+
+    }
+
+    footer strong {
+
+      color: #bbb;
+
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav-inner {
+
+        height: 64px;
+
+      }
+
+      .nav-links {
+
+        display: none;
+
+      }
+
+      .hero-grid,
+
+      .about-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .hero {
+
+        padding-top: 110px;
+
+      }
+
+      .hero-text {
+
+        order: 2;
+
+        text-align: center;
+
+      }
+
+      .hero-image {
+
+        order: 1;
+
+      }
+
+      .buttons {
+
+        justify-content: center;
+
+      }
+
+      .gallery {
+
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+      .social-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+      section {
+
+        padding: 75px 0;
+
+      }
+
+    }
+
+    @media (max-width: 450px) {
+
+      .gallery {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 9px;
+
+      }
+
+      .social-grid {
+
+        gap: 9px;
+
+      }
+
+      .social-card {
+
+        padding: 18px 8px;
+
+      }
+
+      .hero-text h1 {
+
+        font-size: 43px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="container nav-inner">
+
+      <a href="#home" class="logo">
+
+        Shayo Parvaneh <span>| شایو پروانه</span>
+
+      </a>
+
+      <ul class="nav-links">
+
+        <li><a href="#home">خانه</a></li>
+
+        <li><a href="#about">درباره من</a></li>
+
+        <li><a href="#gallery">گالری</a></li>
+
+        <li><a href="#links">لینک‌ها</a></li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+      <div class="hero-image">
+
+        <img src="./photo-1.jpg"
+
+             alt="Shayo Parvaneh"
+
+             loading="eager"
+
+             onerror="this.style.display='none'">
+
+      </div>
+
+      <div class="hero-text">
+
+        <div class="subtitle">سایت رسمی</div>
+
+        <h1>
+
+          شایو <span>پروانه</span>
+
+        </h1>
+
+        <p>
+
+          هنرمند، تولیدکننده محتوا و صاحب این صفحه.
+
+          برای آشنایی بیشتر، آثار، تصاویر و شبکه‌های اجتماعی من را دنبال کنید.
+
+        </p>
+
+        <div class="buttons">
+
+          <a class="btn"
+
+             href="https://youtube.com/@shayoparvane?si=wrhKFDXR9ytN-cJ3"
+
+             target="_blank"
+
+             rel="noopener">
+
+            ▶ یوتیوب
+
+          </a>
+
+          <a class="btn"
+
+             href="https://www.instagram.com/shayoparvane?stkn=YnA3amdqejIwczZn&utm_source=qr"
+
+             target="_blank"
+
+             rel="noopener">
+
+            ◎ اینستاگرام
+
+          </a>
+
+          <a class="btn"
+
+             href="https://t.me/shyparvane"
+
+             target="_blank"
+
+             rel="noopener">
+
+            ✈ تلگرام
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <h2 class="section-title">
+
+        درباره <span>من</span>
+
+      </h2>
+
+      <p class="section-description">
+
+        بیشتر درباره شایو پروانه
+
+      </p>
+
+      <div class="about-grid">
+
+        <div class="about-image">
+
+          <img src="./photo-2.jpg"
+
+               alt="Shayo Parvaneh"
+
+               loading="lazy"
+
+               onerror="this.style.display='none'">
+
+        </div>
+
+        <div class="about-text">
+
+          <p>
+
+            به وب‌سایت رسمی شایو پروانه خوش آمدید.
+
+          </p>
+
+          <p>
+
+            این صفحه برای معرفی فعالیت‌ها، تصاویر،
+
+            محتوا و راه‌های ارتباطی با من ساخته شده است.
+
+          </p>
+
+          <p>
+
+            برای مشاهده جدیدترین محتوا می‌توانید
+
+            شبکه‌های اجتماعی من را دنبال کنید.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- GALLERY -->
+
+  <section id="gallery">
+
+    <div class="container">
+
+      <h2 class="section-title">
+
+        گالری <span>تصاویر</span>
+
+      </h2>
+
+      <p class="section-description">
+
+        مجموعه‌ای از تصاویر
+
+      </p>
+
+      <div class="gallery">
+
+        <div class="gallery-item">
+
+          <img src="./photo-3.jpg" alt="Shayo Parvaneh" loading="lazy">
+
+        </div>
+
+        <div class="gallery-item">
+
+          <img src="./photo-4.jpg" alt="Shayo Parvaneh" loading="lazy">
+
+        </div>
+
+        <div class="gallery-item">
+
+          <img src="./photo-5.jpg" alt="Shayo Parvaneh" loading="lazy">
+
+        </div>
+
+        <div class="gallery-item">
+
+          <img src="./photo-6.jpg" alt="Shayo Parvaneh" loading="lazy">
+
+        </div>
+
+        <div class="gallery-item">
+
+          <img src="./photo-7.jpg" alt="Shayo Parvaneh" loading="lazy">
+
+        </div>
+
+        <div class="gallery-item">
+
+          <img src="./photo-8.jpg" alt="Shayo Parvaneh" loading="lazy">
+
+        </div>
+
+        <div class="gallery-item">
+
+          <img src="./photo-9.jpg" alt="Shayo Parvaneh" loading="lazy">
+
+        </div>
+
+        <div class="gallery-item">
+
+          <img src="./photo-10.jpg" alt="Shayo Parvaneh" loading="lazy">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SOCIAL LINKS -->
+
+  <section id="links">
+
+    <div class="container">
+
+      <h2 class="section-title">
+
+        شبکه‌های <span>اجتماعی</span>
+
+      </h2>
+
+      <p class="section-description">
+
+        برای دنبال کردن من در شبکه‌های اجتماعی
+
+      </p>
+
+      <div class="social-grid">
+
+        <a class="social-card"
+
+           href="https://www.instagram.com/shayoparvane?stkn=YnA3amdqejIwczZn&utm_source=qr"
+
+           target="_blank"
+
+           rel="noopener">
+
+          <div class="icon">◎</div>
+
+          <h3>Instagram</h3>
+
+          <p>@shayoparvane</p>
+
+        </a>
+
+        <a class="social-card"
+
+           href="https://youtube.com/@shayoparvane?si=wrhKFDXR9ytN-cJ3"
+
+           target="_blank"
+
+           rel="noopener">
+
+          <div class="icon">▶</div>
+
+          <h3>YouTube</h3>
+
+          <p>@shayoparvane</p>
+
+        </a>
+
+        <a class="social-card"
+
+           href="https://t.me/shyparvane"
+
+           target="_blank"
+
+           rel="noopener">
+
+          <div class="icon">✈</div>
+
+          <h3>Telegram</h3>
+
+          <p>@shyparvane</p>
+
+        </a>
+
+        <a class="social-card"
+
+           href="https://on.soundcloud.com/sBXing3mtNrJlnPCg7"
+
+           target="_blank"
+
+           rel="noopener">
+
+          <div class="icon">♫</div>
+
+          <h3>SoundCloud</h3>
+
+          <p>Listen to my music</p>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <p>
+
+        © 2026 <strong>Shayo Parvaneh</strong>
+
+        — تمامی حقوق محفوظ است.
+
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
